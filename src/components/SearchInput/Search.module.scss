@@ -1,0 +1,63 @@
+.wrapperSearchField {
+	display: flex;
+	width: 95vw;
+	justify-content: flex-end;
+	margin-top: 2%;
+	input {
+		width: 15vw;
+		height: 4vh;
+		padding: 3px;
+	}
+
+	.wrapperSearchField {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 120px;
+		height: 39px;
+		line-height: 40px;
+		font-size: 18px;
+		font-family: sans-serif;
+		text-decoration: none;
+		color: #333;
+		border: 2px solid #333;
+		letter-spacing: 2px;
+		text-align: center;
+		position: relative;
+		transition: all 0.35s;
+	}
+
+	button span {
+		position: relative;
+		z-index: 2;
+		text-transform: uppercase;
+		font-size: 15px;
+		font-weight: 600;
+	}
+
+	button:after {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 100%;
+		background: #ff003b;
+		transition: all 0.35s;
+	}
+
+	button:hover {
+		color: #fff;
+	}
+
+	button:hover:after {
+		width: 100%;
+	}
+}

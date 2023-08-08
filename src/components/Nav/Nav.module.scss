@@ -1,0 +1,53 @@
+.wrapperNav {
+	height: 10vh;
+	background-color: rgb(223, 196, 160);
+
+	.nav {
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+		.zalandoLogoFull{
+			width: 200px;
+		}
+		.womanClothing,
+		.menClothing {
+			font-size: 22px;
+			text-transform: uppercase;
+			margin: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: 600;
+			transition: all 0.3s linear;
+			&:hover {
+				color: rgb(141, 129, 129);
+			}
+		}
+		.shopCard {
+			margin: 1%;
+			display: flex;
+			align-items: center;
+			justify-items: center;
+			background-color: #fff;
+			border-radius: 10px;
+			height: 50px;
+			width: 180px;
+			text-align: center;
+			.iconShop {
+				font-size: 25px;
+				margin: 10px;
+				color: rgb(222, 95, 45);
+				font-weight: 800;
+			}
+			span {
+				font-size: 18px;
+				font-weight: 600;
+				text-transform: uppercase;
+				color: black;
+			}
+			.linkOrder {
+				text-decoration: none;
+			}
+		}
+	}
+}
