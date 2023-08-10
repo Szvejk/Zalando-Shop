@@ -1,0 +1,32 @@
+.mapValues {
+	width: 98vw;
+	display: flex;
+	margin-top: 2%;
+justify-content: center;
+	.containerWomanProducts {
+		display: grid;
+		grid-template-rows: 3fr;
+		grid-template-columns: repeat(4, 350px);
+		gap: 40px;
+		.imageDiv {
+			height: 20vh;
+			width: 200px;
+			margin: auto;
+		}
+
+		.titleProduct {
+			margin-top: 10px;
+			text-align: center;
+			font-size: 18px;
+			color: black;
+			font-weight: 800;
+			line-height: 30px;
+		}
+		span {
+			margin: 10px;
+			text-align: center;
+			font-weight: 400;
+			color: gray;
+		}
+	}
+}

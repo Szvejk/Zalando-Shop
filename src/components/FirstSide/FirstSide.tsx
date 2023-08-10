@@ -1,15 +1,25 @@
 import React from 'react';
 import Nav from '../Nav/Nav';
 import Home from '../Home/Home';
-import SearchInput from '../SearchInput/SearchInput';
 
-const FirstSide = () => {
+interface productInterface {
+	id: number;
+	title: string;
+	price: number;
+	image: string;
+}
+
+interface Props {
+	setAllValue: React.Dispatch<React.SetStateAction<productInterface[]>>;
+	allValue: productInterface[];
+}
+
+const FirstSide = ({ setAllValue, allValue }: Props) => {
 	return (
 		<div>
-
 			<Nav />
-			<SearchInput/>
-			<Home />
+
+			<Home setAllValue={setAllValue} allValue={allValue} />
 		</div>
 	);
 };

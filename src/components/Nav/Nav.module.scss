@@ -5,12 +5,18 @@
 	.nav {
 		display: flex;
 		justify-content: space-between;
-		align-content: center;
-		.zalandoLogoFull{
+		align-items: center;
+
+		.linkOrder {
+			text-decoration: none;
+		}
+		.zalandoLogoFull {
 			width: 200px;
 		}
 		.womanClothing,
-		.menClothing {
+		.menClothing,
+		.others {
+			cursor: pointer;
 			font-size: 22px;
 			text-transform: uppercase;
 			margin: 10px;
@@ -18,9 +24,9 @@
 			align-items: center;
 			justify-content: center;
 			font-weight: 600;
-			transition: all 0.3s linear;
+			transition: all 0.2s linear;
 			&:hover {
-				color: rgb(141, 129, 129);
+				color: rgb(237, 41, 41);
 			}
 		}
 		.shopCard {
@@ -44,9 +50,6 @@
 				font-weight: 600;
 				text-transform: uppercase;
 				color: black;
-			}
-			.linkOrder {
-				text-decoration: none;
 			}
 		}
 	}

@@ -10,10 +10,23 @@ const Nav = () => {
 		<section className={styles.wrapperNav}>
 			<div className={styles.nav}>
 				<div className={styles.logo}>
-					<img src={zalandoLogo} className={styles.zalandoLogoFull}/>
+					<img src={zalandoLogo} className={styles.zalandoLogoFull} />
 				</div>
-				<div className={styles.womanClothing}>Woman</div>
-				<div className={styles.menClothing}>Men</div>
+				<Link to='/women' className={styles.linkOrder}>
+					{' '}
+					<div className={styles.womanClothing}>Woman</div>
+				</Link>
+
+				<Link to='/men' className={styles.linkOrder}>
+					{' '}
+					<div className={styles.menClothing}>Men</div>
+				</Link>
+
+				<Link to='/others' className={styles.linkOrder}>
+					{' '}
+					<div className={styles.others}>Others</div>
+				</Link>
+
 				<div className={styles.shopCard}>
 					<span className={styles.iconShop}>
 						<AiOutlineShopping />{' '}
