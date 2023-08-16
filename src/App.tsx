@@ -13,6 +13,7 @@ interface productInterface {
 	title: string;
 	price: number;
 	image: string;
+	category: string;
 }
 
 const App = () => {
@@ -25,8 +26,11 @@ const App = () => {
 					element={<FirstSide allValue={allValue} setAllValue={setAllValue} />}
 				/>
 				<Route path='/order' element={<SecondSide />} />
-				<Route path='/men' element={<MenSide />} />
-				<Route path='/women' element={<WomenSide allValue={allValue} setAllValue={setAllValue}  />} />
+				<Route path='/men' element={<MenSide allValue={allValue} setAllValue={setAllValue} />} />
+				<Route
+					path='/women'
+					element={<WomenSide allValue={allValue} setAllValue={setAllValue} />}
+				/>
 				<Route path='/others' element={<OthersSide />} />
 			</Routes>
 		</Router>

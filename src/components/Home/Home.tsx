@@ -7,6 +7,7 @@ interface productInterface {
 	title: string;
 	price: number;
 	image: string;
+	category:string
 }
 interface Props {
 	setAllValue: React.Dispatch<React.SetStateAction<productInterface[]>>;

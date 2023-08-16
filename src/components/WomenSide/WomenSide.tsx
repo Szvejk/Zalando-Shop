@@ -7,7 +7,7 @@ interface productInterface {
 	title: string;
 	price: number;
 	image: string;
-  category:string
+	category: string;
 }
 
 interface Props {
@@ -20,15 +20,23 @@ const WomenSide = ({ setAllValue, allValue }: Props) => {
 		<div>
 			<Nav />
 			<div className={styles.mapValues}>
-				<div className={styles.containerWomanProducts}>
+				<div className={styles.containerProducts}>
 					{allValue.map((el: productInterface, index: number) => (
-						<section key={index}>
-              
-							<img src={el.image} className={styles.imageDiv} />
-							<div className={styles.titleProduct}>{el.title}</div>
-							<span> Price: {el.price} $</span>
-							<button className={styles.addToCard}> Add to your card</button>
-						</section>
+						<>
+						{el.category === "women's clothing" ? (
+								<section key={index} className={styles.wrap}>
+									<img src={el.image} className={styles.imageDiv} />
+									<div className={styles.titleProduct}>{el.title}</div>
+									<span> Price: {el.price} $</span>
+									<button className={styles.addToCard}>
+										{' '}
+										Add to your card
+									</button>
+								</section>
+							) : null}
+						</>
+							
+					
 					))}
 				</div>
 			</div>{' '}

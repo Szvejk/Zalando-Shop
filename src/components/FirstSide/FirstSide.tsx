@@ -7,6 +7,7 @@ interface productInterface {
 	title: string;
 	price: number;
 	image: string;
+	category: string;
 }
 
 interface Props {
@@ -18,7 +19,6 @@ const FirstSide = ({ setAllValue, allValue }: Props) => {
 	return (
 		<div>
 			<Nav />
-
 			<Home setAllValue={setAllValue} allValue={allValue} />
 		</div>
 	);
