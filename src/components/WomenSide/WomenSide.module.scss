@@ -9,7 +9,7 @@
 		grid-template-columns: repeat(4, 350px);
 		gap: 40px;
 		.imageDiv {
-			height: 20vh;
+			height: 50%;
 			width: 200px;
 			margin: auto;
 		}
@@ -44,6 +44,27 @@
 				color: gray;
 				display: block;
 				text-align: center;
+			}
+		}
+	}
+}
+@media (max-width: 1000px) {
+	.mapValues {
+		width: 98vw;
+		display: flex;
+		margin-top: 2%;
+		justify-content: center;
+		align-items: center;
+
+		.containerProducts {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			width: 50%;
+			margin-top: 10%;
+			.imageDiv {
+				height: 20%;
 			}
 		}
 	}

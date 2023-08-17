@@ -23,7 +23,7 @@ const WomenSide = ({ setAllValue, allValue }: Props) => {
 				<div className={styles.containerProducts}>
 					{allValue.map((el: productInterface, index: number) => (
 						<>
-						{el.category === "women's clothing" ? (
+							{el.category === "women's clothing" ? (
 								<section key={index} className={styles.wrap}>
 									<img src={el.image} className={styles.imageDiv} />
 									<div className={styles.titleProduct}>{el.title}</div>
@@ -35,8 +35,6 @@ const WomenSide = ({ setAllValue, allValue }: Props) => {
 								</section>
 							) : null}
 						</>
-							
-					
 					))}
 				</div>
 			</div>{' '}

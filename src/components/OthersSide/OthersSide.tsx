@@ -1,11 +1,45 @@
-import React from 'react'
+import React from 'react';
+import Nav from '../Nav/Nav';
+import styles from '../WomenSide/WomenSide.module.scss';
 
-const OthersSide = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+interface productInterface {
+	id: number;
+	title: string;
+	price: number;
+	image: string;
+	category: string;
+}
+interface Props {
+	setAllValue: React.Dispatch<React.SetStateAction<productInterface[]>>;
+	allValue: productInterface[];
 }
 
-export default OthersSide
+const OthersSide = ({ setAllValue, allValue }: Props) => {
+	return (
+		<div>
+			<Nav />
+			<div className={styles.mapValues}>
+				<div className={styles.containerProducts}>
+					{allValue.map((el: productInterface, index: number) => (
+						<>
+							{el.category !== "women's clothing" &&
+							el.category !== "men's clothing" ? (
+								<section key={index} className={styles.wrap}>
+									<img src={el.image} className={styles.imageDiv} />
+									<div className={styles.titleProduct}>{el.title}</div>
+									<span> Price: {el.price} $</span>
+									<button className={styles.addToCard}>
+										{' '}
+										Add to your card
+									</button>
+								</section>
+							) : null}
+						</>
+					))}
+				</div>
+			</div>{' '}
+		</div>
+	);
+};
+
+export default OthersSide;

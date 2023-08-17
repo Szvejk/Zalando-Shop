@@ -18,6 +18,13 @@ interface productInterface {
 
 const App = () => {
 	const [allValue, setAllValue] = useState<productInterface[]>([]);
+
+	const filter = (x: string) => {
+		return allValue.filter((el) => el.category === x)
+		
+		;
+	};
+
 	return (
 		<Router>
 			<Routes>
@@ -26,12 +33,18 @@ const App = () => {
 					element={<FirstSide allValue={allValue} setAllValue={setAllValue} />}
 				/>
 				<Route path='/order' element={<SecondSide />} />
-				<Route path='/men' element={<MenSide allValue={allValue} setAllValue={setAllValue} />} />
+				<Route
+					path='/men'
+					element={<MenSide allValue={allValue} setAllValue={setAllValue} />}
+				/>
 				<Route
 					path='/women'
 					element={<WomenSide allValue={allValue} setAllValue={setAllValue} />}
 				/>
-				<Route path='/others' element={<OthersSide />} />
+				<Route
+					path='/others'
+					element={<OthersSide allValue={allValue} setAllValue={setAllValue} />}
+				/>
 			</Routes>
 		</Router>
 	);
